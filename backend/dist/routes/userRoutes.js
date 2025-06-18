@@ -7,6 +7,10 @@ const express_1 = require("express");
 const user_controller_1 = require("../controllers/user.controller");
 const authMiddleware_1 = __importDefault(require("../middleware/authMiddleware"));
 const router = (0, express_1.Router)();
+router.get('/api', (_req, res) => {
+    console.log('🟢 API GET / llamada');
+    res.send('API funcionando');
+});
 router.post('/register', user_controller_1.register);
 router.post('/login', user_controller_1.login);
 router.get('/me', authMiddleware_1.default, user_controller_1.getProfile);

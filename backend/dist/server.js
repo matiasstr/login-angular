@@ -3,7 +3,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
 const app_1 = __importDefault(require("./app"));
 const port = process.env.PORT || 3001;
-app_1.default.listen(port, () => console.log(`Server corriendo en http://localhost:${port}`));
+console.log('🟢 SERVER ENV TEST MONGODB_URI:', process.env.MONGODB_URI);
+app_1.default.listen(port, () => {
+    console.log(`Server corriendo en http://localhost:${port}`);
+});
 //# sourceMappingURL=server.js.map

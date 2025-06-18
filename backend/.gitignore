@@ -1,0 +1,3 @@
+# Evitar archivos de salida de TypeScript y ambiente
+dist/
+.env

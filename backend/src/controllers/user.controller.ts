@@ -20,10 +20,11 @@ export const login = async (req: Request, res: Response) => {
     res.status(401).json({ error: 'Email o contraseña incorrecta.' });
     return;
   }
-
+  
   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET!, { expiresIn: '1d' });
-
+  
   res.json({ token });
+  return;
 };
 
 export const getProfile = async (req: Request, res: Response) => {
