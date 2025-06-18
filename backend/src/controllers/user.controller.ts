@@ -9,7 +9,7 @@ export const register = async (req: Request, res: Response) => {
   const user = new User({ email, password: hashedPassword, name });
 
   await user.save();
-  res.status(201).json({ message: 'Usuario registrado correctamente.' });
+  res.status(201).json({ message: 'Usuario registrado correctamente !' });
 };
 
 export const login = async (req: Request, res: Response) => {
