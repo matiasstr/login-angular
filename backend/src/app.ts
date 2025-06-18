@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 app.use('/api', userRoutes);
 app.get('/', (_req, res) => {
-    res.send('API funcionando');
+    res.send('Server On');
   });
 
 mongoose.connect(process.env.MONGODB_URI!)
